@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() 
+{
+    int arr[10] = {77,89,45,66,76,25,35,47};
+    int element, pos = -1;
+
+    printf("Enter the element to search: ");
+    scanf("%d", &element);
+
+    for(int i=0; i<10; i++) 
+    {
+        if(arr[i] == element) 
+        {
+            pos = i;
+            break;
+        }
+    }
+
+    if(pos == -1) 
+    {
+        printf("Element not found in array.\n");
+    } else {
+        printf("Element found at position %d in array.\n", pos+1);
+    }
+
+    return 0;
+}
